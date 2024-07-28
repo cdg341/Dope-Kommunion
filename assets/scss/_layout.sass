@@ -1,0 +1,189 @@
+// Media Queries
+=above($width)
+  @media only screen and (min-width: $width)
+    @content
+
+=below($width)
+  @media only screen and (max-width: $width)
+    @content
+
+=between($min, $max)
+  @media only screen and (min-width: $min) and (max-width: $max)
+    @content
+
+=orient($dir,$width)
+  @if $dir == portrait
+    @media only screen and (orientation: portrait) and (max-width: $width)
+      @content
+  @else if $dir == landscape
+    @media only screen and (orientation: landscape) and (max-width: $width)
+      @content
+
+// Containers
+=xs-con
+  width: 100%
+  max-width: 55rem
+  // max-width: calc(192rem - 70rem)
+  margin: 0 auto
+  padding: 0 max(3rem,5vw)
+
+=sm-con
+  width: 100%
+  max-width: 75rem
+  // max-width: calc(192rem - 50rem)
+  margin: 0 auto
+  padding: 0 max(3rem,5vw)
+
+=md-con
+  width: 100%
+  max-width: 115rem
+  // max-width: calc(192rem - ((20.8rem - max(5vw,3rem)) * 2))
+  margin: 0 auto
+  padding: 0 max(5vw,3rem)
+
+=lg-con
+  width: 100%
+  max-width: 154rem
+  // max-width: calc(192rem - ((12.8rem - max(5vw,3rem)) * 2))
+  margin: 0 auto
+  padding: 0 max(3rem,5vw)
+
+=xl-con
+  width: 100%
+  max-width: 192rem
+  margin: 0 auto
+  padding: 0 5vw
+  +below($xm)
+    padding: 0 max(3rem,5vw)
+
+=pg
+  width: 100%
+  max-width: 192rem
+  margin: 0 auto
+  padding: 0 max(3rem,5vw)
+
+// Padding
+$p_xs: 5rem
+$p_s: 10rem
+$p_m: 15rem
+$p_l: 20rem
+$p_xl: 30rem
+
+=xs-padding($location: both)
+  @if $location == top
+    padding-top: $p_xs
+  @else if $location == bottom
+    padding-bottom: $p_xs
+  @else if $location == both
+    padding-top: $p_xs
+    padding-bottom: $p_xs
+
+=s-padding($location: both)
+  @if $location == top
+    padding-top: $p_s
+    +below($xs)
+      padding-top: 8rem
+  @else if $location == bottom
+    padding-bottom: $p_s
+    +below($xs)
+      padding-bottom: 8rem
+  @else if $location == both
+    padding-top: $p_s
+    padding-bottom: $p_s
+    +below($xs)
+      padding-top: 8rem
+      padding-bottom: 8rem
+
+=m-padding($location: both)
+  @if $location == top
+    padding-top: $p_m
+    +below($xs)
+      padding-top: 10rem
+  @else if $location == bottom
+    padding-bottom: $p_m
+    +below($xs)
+      padding-bottom: 10rem
+  @else if $location == both
+    padding-top: $p_m
+    padding-bottom: $p_m
+    +below($xs)
+      padding-top: 10rem
+      padding-bottom: 10rem
+
+=l-padding($location: both)
+  @if $location == top
+    padding-top: $p_l
+    +below($xs)
+      padding-top: 15rem
+  @else if $location == bottom
+    padding-bottom: $p_l
+    +below($xs)
+      padding-bottom: 15rem
+  @else if $location == both
+    padding-top: $p_l
+    padding-bottom: $p_l
+    +below($xs)
+      padding-top: 15rem
+      padding-bottom: 15rem
+
+=xl-padding($location: both)
+  @if $location == top
+    padding-top: $p_xl
+    +below($xs)
+      padding-top: 20rem
+  @else if $location == bottom
+    padding-bottom: $p_xl
+    +below($xs)
+      padding-bottom: 20rem
+  @else if $location == both
+    padding-top: $p_xl
+    padding-bottom: $p_xl
+    +below($xs)
+      padding-top: 20rem
+      padding-bottom: 20rem
+
+
+=flex($grow, $shrink, $basis)
+  flex-grow: $grow
+  flex-shrink: $shrink
+  flex-basis: $basis
+  @if $basis != 0 and $basis != auto
+    max-width: $basis
+
+=flexbox($align: stretch, $justify: flex-start, $wrap: nowrap, $direction: row)
+  display: flex
+  justify-content: $justify
+  align-items: $align
+  flex-wrap: $wrap
+  flex-direction: $direction
+
+=fb($a, $b)
+  display: flex
+  align-items: $a
+  justify-content: $b
+
+=colsr($num: 3, $margin: 1rem, $outer-margin: true)
+  +above($m)
+    +cols(#{$num}, #{$margin}, $outer-margin)
+  +between($s,$m)
+    +cols(round($num / 2), #{$margin}, $outer-margin)
+  +below($s)
+    +cols(1, #{$margin}, $outer-margin)
+
+=cols($num: 3, $margin: 1rem, $outer-margin: true)
+  display: flex
+  flex-wrap: wrap
+  > *
+    +col(#{$num}, #{$margin}, $outer-margin)
+
+=col($num: 3, $margin: 1rem, $outer-margin: true)
+  padding: 1rem
+  margin: #{$margin}
+  @if $outer-margin == true
+    +flex(1, 1, calc((100% / #{$num}) - (2 * #{$margin}) - 1px))
+  @else
+    +flex(1, 1, calc((100% / #{$num}) - (2 * #{$margin}) + ((2 * #{$margin}) / #{$num}) - 1px))
+    &:nth-child(#{$num}n + 1)
+      margin-left: 0
+    &:nth-child(#{$num}n)
+      margin-right: 0

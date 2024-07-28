@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700");
+html {
+  font-size: 10px;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  font-family: "Lato", sans-serif;
+}
+body p {
+  margin: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+}
+.header .nav-menu {
+  padding-right: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4rem;
+}
+.header .nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.2rem;
+}
+.header .nav-menu a li {
+  list-style: none;
+}
+
+.hero {
+  background-image: url(/assets/images/Main_header.png);
+  background-repeat: no-repeat;
+  background-position-y: -5rem;
+  background-size: cover;
+  /* height: clamp(30rem, 48vw, 111rem); */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 68rem 10rem 1rem;
+}
+.hero h1 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 6rem;
+}
+
+.two-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  background-color: #000;
+  color: #fff;
+  padding: 12rem;
+}
+.two-column .left, .two-column .right {
+  width: 50%;
+}
+.two-column .left img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.two-column .right .heading span {
+  display: block;
+}
+.two-column .right .heading h2 {
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+.two-column .right .text-content p {
+  line-height: 1.7;
+  max-width: 46rem;
+  font-weight: 200;
+}
+.two-column .right .text-content p span {
+  font-style: italic;
+  font-weight: 800;
+}
+
+.quote {
+  background-color: #000;
+  text-align: center;
+  padding-bottom: 10rem;
+}
+.quote p {
+  max-width: 70rem;
+  margin: 0 auto;
+  font-size: 3rem;
+  color: #b79b6f;
+}
+.quote span {
+  color: #b79b6f;
+  padding-top: 2rem;
+  display: block;
+}
+
+.picture-row {
+  display: flex;
+  height: 30rem;
+}
+.picture-row img {
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quote-two {
+  background: linear-gradient(90deg, #d2bc5e, #cc8f86, #aaada3);
+  text-align: center;
+  padding: 20rem 10rem;
+}
+.quote-two p {
+  max-width: 157rem;
+  margin: 0 auto;
+  font-size: 3rem;
+  color: #fff;
+  font-size: 6rem;
+}
+.quote-two span {
+  color: #fff;
+  padding-top: 2rem;
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
