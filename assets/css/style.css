@@ -204,4 +204,27 @@ body p {
   width: 100%;
 }
 
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 12rem;
+}
+footer .contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+}
+footer .contact .heading {
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+footer .contact .email {
+  font-size: 22px;
+}
+footer .contact .email a {
+  color: #fff;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=style.css.map */
