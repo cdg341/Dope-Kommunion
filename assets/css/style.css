@@ -20,6 +20,11 @@ body p {
   left: 0;
   right: 0;
   color: #fff;
+  transition: all 0.3s ease-out;
+  padding: 1.5 0;
+}
+.header.active {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .header .nav-menu {
   padding-right: 10rem;
@@ -131,6 +136,72 @@ body p {
   color: #fff;
   padding-top: 2rem;
   display: block;
+}
+
+.two-column-host {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 12rem;
+  gap: 5rem;
+}
+.two-column-host .left, .two-column-host .right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.two-column-host .left .button, .two-column-host .right .button {
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 1rem 4rem;
+  color: #fff;
+  border-radius: 7rem;
+  text-transform: uppercase;
+}
+.two-column-host .left p, .two-column-host .right p {
+  padding-top: 5rem;
+  line-height: 1.7;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12rem;
+  gap: 8rem;
+}
+.form .left {
+  width: 40%;
+}
+.form .left .text-content p {
+  line-height: 1.7;
+}
+.form .right {
+  width: 60%;
+}
+.form .right form label {
+  display: block;
+  padding-bottom: 1rem;
+  font-size: 16px;
+}
+.form .right form input {
+  padding: 0.5rem;
+  width: 100%;
+}
+.form .right form legend {
+  padding-bottom: 1.5rem;
+}
+.form .right form .name {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+.form .right form .name .first-name, .form .right form .name .last-name {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
