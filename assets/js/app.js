@@ -1,3 +1,5 @@
+import AOS from 'aos';
+
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', ()=> {
