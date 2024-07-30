@@ -6,6 +6,7 @@
     <title>Dope Kommunion</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <script type="text/javascript" defer src="/assets/js/app.js"></script>
+    <link rel="stylesheet" href="/node_modules/aos/dist/aos.css">
   </head>
   <body>
     <nav class="header">
@@ -25,13 +26,13 @@
       </h1>
     </section>
     <section class="two-column">
-      <div class="left">
+      <div class="left" data-aos="fade-right" data-aos-duration="1000">
         <img
           src="/assets/images/596B60F1-85E3-46B6-A074-9097B733D74B.JPG"
           alt=""
         />
       </div>
-      <div class="right">
+      <div class="right" data-aos="fade-left" data-aos-duration="1000">
         <div class="heading">
           <h2><span>What is</span> Dope Kommunion</h2>
         </div>
@@ -45,11 +46,11 @@
       </div>
     </section>
     <section class="quote">
-      <p>
+      <p data-aos="fade-in" data-aos-duration="1000">
         "Taking the sacred act of Communion and entering the community to those
         seeking spiritual inspiration."
       </p>
-      <span>- Stacy Brown</span>
+      <span data-aos="fade-up" data-aos-duration="1500">- Stacy Brown</span>
     </section>
     <section class="picture-row">
       <img
@@ -122,5 +123,9 @@
         </form>
       </div>
     </section>
+    <script src="/node_modules/aos/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
