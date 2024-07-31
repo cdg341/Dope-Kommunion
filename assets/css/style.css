@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700");
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
+  scroll-margin-top: -26.4px;
 }
 
 body {
@@ -37,6 +39,10 @@ body p {
   color: #fff;
   text-decoration: none;
   font-size: 2.2rem;
+  transition: all 0.3s ease-out;
+}
+.header .nav-menu a:hover {
+  color: #b99d6f;
 }
 .header .nav-menu a li {
   list-style: none;
@@ -45,13 +51,12 @@ body p {
 .hero {
   background-image: url(/assets/images/Main_header.png);
   background-repeat: no-repeat;
-  background-position-y: -5rem;
   background-size: cover;
-  /* height: clamp(30rem, 48vw, 111rem); */
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  padding: 68rem 10rem 1rem;
+  height: 100vh;
+  padding: 0 10rem;
 }
 .hero h1 {
   text-transform: uppercase;
