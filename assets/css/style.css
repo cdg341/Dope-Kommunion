@@ -3,21 +3,27 @@ html {
   font-size: 10px;
   scroll-behavior: smooth;
   scroll-margin-top: -26.4px;
+  box-sizing: border-box;
 }
 
 body {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-size: 2rem;
   font-family: "Lato", sans-serif;
+  background-color: #000;
 }
 body p {
+  margin: 0;
+}
+body h2 {
+  font-size: 5rem;
   margin: 0;
 }
 
 .header {
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
   right: 0;
@@ -26,7 +32,7 @@ body p {
   padding: 1.5 0;
 }
 .header.active {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #000;
 }
 .header .nav-menu {
   padding-right: 10rem;
@@ -131,11 +137,11 @@ body p {
   padding: 20rem 10rem;
 }
 .quote-two p {
-  max-width: 157rem;
+  max-width: 125rem;
+  font-weight: 700;
   margin: 0 auto;
-  font-size: 3rem;
   color: #fff;
-  font-size: 6rem;
+  font-size: 7rem;
 }
 .quote-two span {
   color: #fff;
@@ -159,13 +165,19 @@ body p {
   justify-content: flex-start;
   flex-direction: column;
 }
+.two-column-host .left .text-content, .two-column-host .right .text-content {
+  max-width: 48rem;
+  margin: 0 auto;
+}
 .two-column-host .left .button, .two-column-host .right .button {
   text-decoration: none;
   border: 1px solid #fff;
-  padding: 1rem 4rem;
+  padding: 2rem 4rem;
   color: #fff;
   border-radius: 7rem;
   text-transform: uppercase;
+  min-width: 13rem;
+  text-align: center;
 }
 .two-column-host .left p, .two-column-host .right p {
   padding-top: 5rem;
@@ -174,13 +186,17 @@ body p {
 
 .form {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 12rem;
   gap: 8rem;
+  background-color: #fff;
 }
 .form .left {
   width: 40%;
+}
+.form .left .text-content h2 {
+  padding-bottom: 2rem;
 }
 .form .left .text-content p {
   line-height: 1.7;
@@ -194,8 +210,10 @@ body p {
   font-size: 16px;
 }
 .form .right form input {
-  padding: 0.5rem;
+  padding: 1.5rem 1rem;
   width: 100%;
+  max-width: 42rem;
+  font-size: 2rem;
 }
 .form .right form legend {
   padding-bottom: 1.5rem;
@@ -207,6 +225,28 @@ body p {
 }
 .form .right form .name .first-name, .form .right form .name .last-name {
   width: 100%;
+}
+.form .right form .date label {
+  margin-top: 2rem;
+}
+.form .right form .date input[type=date] {
+  width: unset;
+}
+.form .right form button[type=submit] {
+  margin-top: 2rem;
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 7rem;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.form .right form button[type=submit]:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: transparent;
 }
 
 footer {

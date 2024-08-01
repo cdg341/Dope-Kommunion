@@ -11,11 +11,11 @@
   <body>
     <nav class="header">
       <ul class="nav-menu">
-        <a href="#about"><li>About</li></a>
-        <a href="#host"><li>Host</li></a>
-        <a href="#"><li>Book</li></a>
-        <a href="#"><li>Dope Kommunity</li></a>
-        <a href="#contact"><li>Kontact</li></a>
+        <a href="/#about"><li>About</li></a>
+        <a href="/#host"><li>Host</li></a>
+        <a href="/#host"><li>Book</li></a>
+        <a href="/#dk"><li>Dope Kommunity</li></a>
+        <a href="/#contact"><li>Kontact</li></a>
       </ul>
     </nav>
     <!-- end of header-->
@@ -52,7 +52,7 @@
       </p>
       <span data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">- Stacy Brown</span>
     </section>
-    <section class="picture-row">
+    <section class="picture-row" data-aos="slide-up" data-aos-duration="1000">
       <img
         src="/assets/images/C63F9CA8-44B0-4813-BC19-0F6ABC12F34C.JPG"
         alt=""
@@ -96,7 +96,7 @@
         </div>
       </div>
     </section>
-    <section class="form" id="">
+    <section class="form" id="dk">
       <div class="left" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="300" data-aos-once="true">
         <div class="text-content">
           <h2>Dope Kommunity</h2>
@@ -105,7 +105,7 @@
       </div>
       <div class="right" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="300" data-aos-once="true">
         <form netlify>
-          <legend>Name</legend>
+          <legend>Name (required)</legend>
           <div class="name">
             <div class="first-name">
               <label for="first">First Name</label>
@@ -117,10 +117,14 @@
             </div>
           </div>
           <div class="email">
-            <label for="email">Email*</label>
+            <label for="email">Email (required)</label>
             <input type="email" required name="email" id="email" />
           </div>
-          <input type="submit" value="submit">
+          <div class="date">
+            <label for="date">Date (required)</label>
+            <input type="date" id="date" name="date">
+          </div>
+          <button type="submit" value="submit">Join Now</button>
         </form>
       </div>
     </section>
