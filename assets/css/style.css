@@ -3,12 +3,15 @@ html {
   font-size: 10px;
   scroll-behavior: smooth;
   scroll-margin-top: -26.4px;
+}
+
+* {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  padding: 0;
-  margin: 0;
   font-size: 2rem;
   font-family: "Lato", sans-serif;
   background-color: #000;
@@ -30,13 +33,14 @@ body h2 {
   right: 0;
   color: #fff;
   transition: all 0.3s ease-out;
-  padding: 2.5rem 1.5rem 2.5rem 0;
+  padding: 7.5rem 1.5rem 2.5rem 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 .header.active {
   background-color: #000;
+  padding-top: 2.5rem;
 }
 .header .nav-menu {
   padding-right: 10rem;
@@ -48,14 +52,15 @@ body h2 {
 .header .nav-menu a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  padding: 1.1rem 1.2rem;
   transition: all 0.3s ease-out;
   text-transform: uppercase;
 }
 .header .nav-menu a:hover {
   color: #b99d6f;
 }
-.header .nav-menu a li {
+.header .nav-menu li {
   list-style: none;
 }
 @media only screen and (max-width: 1024px) {
@@ -206,21 +211,29 @@ body.overlay-active .mobile-overlay {
   }
 }
 .hero {
-  background-image: url(/assets/images/Main_header.png);
+  background-image: url(/assets/images/Main_header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-start;
   height: 100vh;
   padding: 0 10rem;
+  row-gap: 10rem;
+  flex-direction: column;
 }
 @media only screen and (max-width: 992px) {
   .hero {
     height: 55vh;
   }
 }
-.hero h1 {
+.hero .logo {
+  padding-top: 7rem;
+}
+.hero .logo img {
+  width: clamp(2rem, 35vw, 55rem);
+}
+.hero .heading h1 {
   text-transform: uppercase;
   color: #fff;
   font-size: 6rem;
@@ -235,8 +248,19 @@ body.overlay-active .mobile-overlay {
   color: #fff;
   padding: 12rem;
 }
+@media only screen and (max-width: 1024px) {
+  .two-column {
+    flex-direction: column-reverse;
+    padding: 8rem 3rem;
+  }
+}
 .two-column .left, .two-column .right {
   width: 50%;
+}
+@media only screen and (max-width: 1024px) {
+  .two-column .left, .two-column .right {
+    width: 100%;
+  }
 }
 .two-column .left img {
   height: 100%;
@@ -255,6 +279,11 @@ body.overlay-active .mobile-overlay {
   max-width: 46rem;
   font-weight: 200;
 }
+@media only screen and (max-width: 1024px) {
+  .two-column .right .text-content p {
+    max-width: unset;
+  }
+}
 .two-column .right .text-content p span {
   font-style: italic;
   font-weight: 800;
@@ -264,6 +293,12 @@ body.overlay-active .mobile-overlay {
   background-color: #000;
   text-align: center;
   padding-bottom: 10rem;
+}
+@media only screen and (max-width: 1024px) {
+  .quote {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 .quote p {
   max-width: 70rem;
@@ -334,6 +369,11 @@ body.overlay-active .mobile-overlay {
   text-transform: uppercase;
   min-width: 13rem;
   text-align: center;
+  transition: all 0.3s ease-out;
+}
+.two-column-host .left .button:hover, .two-column-host .right .button:hover {
+  background-color: #fff;
+  color: #000;
 }
 .two-column-host .left p, .two-column-host .right p {
   padding-top: 5rem;
@@ -369,6 +409,10 @@ body.overlay-active .mobile-overlay {
   padding: 1.5rem 1rem;
   width: 100%;
   font-size: 2rem;
+  border: 1px solid black;
+}
+.form .right form input:hover, .form .right form input:focus {
+  outline-color: #000;
 }
 .form .right form legend {
   padding-bottom: 1.5rem;
@@ -407,13 +451,14 @@ body.overlay-active .mobile-overlay {
 footer {
   background-color: #000;
   color: #fff;
-  padding: 3rem 12rem;
+  padding: 8rem 12rem;
 }
 footer .contact {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 5rem;
+  gap: 10rem;
+  padding-bottom: 5rem;
 }
 footer .contact .heading {
   text-transform: uppercase;
@@ -425,6 +470,22 @@ footer .contact .email {
 footer .contact .email a {
   color: #fff;
   text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+footer .contact .email a:hover {
+  color: #b99d6f;
+}
+footer .contact .cash-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+footer .contact .cash-con .cash-icons img {
+  width: 6rem;
+}
+footer .contact .cash-con .cash-icons img:nth-last-child(n) {
+  border-radius: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 const header = document.querySelector('.header');
+// @import owlCarousel
 
 window.addEventListener('scroll', ()=> {
   console.log(window.scrollY);
@@ -44,3 +45,26 @@ menuLink.forEach((link) => {
     });
   })
 });
+
+// document.addEventListener('DOMContentLoaded', ()=> {
+//   const carousel = document.querySelector('.owl-carousel');
+
+//   carousel.owlCarousel();
+// })
+$(document).ready(function($) {
+  $('.owl-carousel').owlCarousel();
+  if($(window).width() < 768) {
+      $('.picture-row').addClass('owl-carousel');
+    } else {
+      $('.picture-row').removeClass('owl-carousel');
+    }
+  $(window).on('resize', function() {
+    $('.owl-carousel').owlCarousel();
+    if($(window).width() < 768) {
+      $('.picture-row').addClass('owl-carousel');
+    } else {
+      $('.picture-row').removeClass('owl-carousel');
+    }
+
+  })
+})

@@ -6,10 +6,11 @@
   right: 0
   color: #fff
   +transition
-  padding: 2.5rem 1.5rem 2.5rem 0
+  padding: 7.5rem 1.5rem 2.5rem 0
   +fb(center, flex-end)
   &.active
     background-color: #000
+    padding-top: 2.5rem
   .nav-menu
     padding-right: 10rem
     +fb(center, flex-end)
@@ -17,13 +18,14 @@
     a
       color: #fff
       text-decoration: none
-      font-size: 1.6rem
+      font-size: 1.8rem
+      padding: 1.1rem 1.2rem
       +transition
       text-transform: uppercase
       &:hover
         color: #b99d6f
-      li
-        list-style: none
+    li
+      list-style: none
     +below($xm)
       display: none
   .mobile-button
