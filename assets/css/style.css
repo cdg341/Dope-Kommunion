@@ -250,9 +250,8 @@ body.overlay-active .mobile-overlay {
 .hero .heading .socials .social-icons img {
   width: 5rem;
 }
-.hero .heading .socials .social-icons #youtube {
-  border-radius: 20px;
-  overflow: hidden;
+.hero .heading .socials .social-icons #youtube, .hero .heading .socials .social-icons #facebook {
+  border-radius: 10px;
 }
 
 .two-column {
