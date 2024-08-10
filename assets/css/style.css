@@ -233,10 +233,26 @@ body.overlay-active .mobile-overlay {
 .hero .logo img {
   width: clamp(2rem, 35vw, 55rem);
 }
+.hero .heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
 .hero .heading h1 {
   text-transform: uppercase;
   color: #fff;
   font-size: 6rem;
+}
+.hero .heading .socials .social-icons {
+  margin-right: 2rem;
+}
+.hero .heading .socials .social-icons img {
+  width: 5rem;
+}
+.hero .heading .socials .social-icons #youtube {
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .two-column {

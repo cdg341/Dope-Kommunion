@@ -20,7 +20,17 @@
     img
       width: clamp(2rem, 35vw, 55rem)
   .heading
+    +fb(flex-end, space-between)
+    width: 100%
     h1
       text-transform: uppercase
       color: #fff
       font-size: 6rem
+    .socials
+      .social-icons
+        margin-right: 2rem
+        img
+          width: 5rem
+        #youtube
+          border-radius: 20px
+          overflow: hidden
