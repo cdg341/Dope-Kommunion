@@ -249,6 +249,10 @@ body.overlay-active .mobile-overlay {
 }
 .hero .heading .socials .social-icons img {
   width: 5rem;
+  transition: all 0.3s ease-out;
+}
+.hero .heading .socials .social-icons img:hover {
+  transform: translateY(-5px);
 }
 .hero .heading .socials .social-icons #youtube, .hero .heading .socials .social-icons #facebook {
   border-radius: 10px;
@@ -328,11 +332,24 @@ body.overlay-active .mobile-overlay {
 }
 
 .picture-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media only screen and (max-width: 992px) {
+  .picture-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.picture-row .gallery {
   height: 30rem;
 }
-.picture-row img {
-  width: 25%;
+@media only screen and (max-width: 768px) {
+  .picture-row .gallery {
+    height: 20rem;
+  }
+}
+.picture-row .gallery img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -498,9 +515,13 @@ footer .contact .cash-con {
 }
 footer .contact .cash-con .cash-icons img {
   width: 6rem;
+  transition: all 0.3s ease-out;
 }
 footer .contact .cash-con .cash-icons img:nth-last-child(n) {
   border-radius: 12px;
+}
+footer .contact .cash-con .cash-icons img:hover {
+  transform: translateY(-5px);
 }
 
 /*# sourceMappingURL=style.css.map */

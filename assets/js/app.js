@@ -51,20 +51,20 @@ menuLink.forEach((link) => {
 
 //   carousel.owlCarousel();
 // })
-$(document).ready(function($) {
-  $('.owl-carousel').owlCarousel();
-  if($(window).width() < 768) {
-      $('.picture-row').addClass('owl-carousel');
-    } else {
-      $('.picture-row').removeClass('owl-carousel');
-    }
-  $(window).on('resize', function() {
-    $('.owl-carousel').owlCarousel();
-    if($(window).width() < 768) {
-      $('.picture-row').addClass('owl-carousel');
-    } else {
-      $('.picture-row').removeClass('owl-carousel');
-    }
+// $(document).ready(function($) {
+//   $('.owl-carousel').owlCarousel();
+//   if($(window).width() < 768) {
+//       $('.picture-row').addClass('owl-carousel');
+//     } else {
+//       $('.picture-row').removeClass('owl-carousel');
+//     }
+//   $(window).on('resize', function() {
+//     $('.owl-carousel').owlCarousel();
+//     if($(window).width() < 768) {
+//       $('.picture-row').addClass('owl-carousel');
+//     } else {
+//       $('.picture-row').removeClass('owl-carousel');
+//     }
 
-  })
-})
+//   })
+// })
