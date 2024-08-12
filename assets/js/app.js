@@ -67,8 +67,7 @@ const handleSubmit = (event) => {
   const myForm = event.target;
   const formData = new FormData(myForm);
   const contactForm = document.querySelector('form')
-  const thankYou = document.createElement('div').
-  classList.add('thank-you');
+  const thankYou = document.createElement('div');
   const thankYouHeading = document.createElement('h2');
   const thankYouText = document.createElement('p');
   const container = document.querySelector('.form .right')
@@ -84,9 +83,10 @@ const handleSubmit = (event) => {
     thankYouHeading.innerHTML = 'Thank You';
     thankYouText.innerHTML = 'Thank you for contacting us, we\'ll be in touch very SVGComponentTransferFunctionElement.'
     contactForm.remove();
+    container.appendChild(thankYou);
+    container.classList.add('thank-you');
     thankYou.appendChild(thankYouHeading);
     thankYou.appendChild(thankYouText);
-    container.appendChild(thankYou);
 
 };
 
