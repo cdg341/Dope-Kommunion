@@ -84,7 +84,7 @@ const handleSubmit = (event) => {
     thankYouText.innerHTML = 'Thank you for contacting us, we\'ll be in touch very soon.'
     contactForm.remove();
     container.appendChild(thankYou);
-    container.classList.add('thank-you');
+    thankYou.classList.add('thank-you');
     thankYou.appendChild(thankYouHeading);
     thankYou.appendChild(thankYouText);
 
