@@ -84,9 +84,9 @@ const handleSubmit = (event) => {
     thankYouHeading.textContent = 'Thank You';
     thankYouText.textContent = 'Thank you for contacting us, we\'ll be in touch very SVGComponentTransferFunctionElement.'
     contactForm.remove();
-    container.appendChild(thankYou);
     thankYou.appendChild(thankYouHeading);
     thankYou.appendChild(thankYouText);
+    container.appendChild(thankYou);
 
 };
 
