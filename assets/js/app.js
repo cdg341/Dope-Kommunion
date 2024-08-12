@@ -80,8 +80,8 @@ const handleSubmit = (event) => {
     .then(() => console.log("Form successfully submitted"))
     .catch((error) => alert(error));
 
-    thankYouHeading.innerHTML = 'Thank You';
-    thankYouText.innerHTML = 'Thank you for contacting us, we\'ll be in touch very SVGComponentTransferFunctionElement.'
+    thankYouHeading.innerHTML = 'Thank You!';
+    thankYouText.innerHTML = 'Thank you for contacting us, we\'ll be in touch very soon.'
     contactForm.remove();
     container.appendChild(thankYou);
     container.classList.add('thank-you');
