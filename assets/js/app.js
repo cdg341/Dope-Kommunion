@@ -60,11 +60,18 @@ mobileOverlay.addEventListener('click', ()=> {
   mobileMenu.classList.remove('active')
 })
 
+//Add ajax to form so page doesn't refresh on submit
 const handleSubmit = (event) => {
   event.preventDefault();
 
   const myForm = event.target;
   const formData = new FormData(myForm);
+  const contactForm = document.querySelector('form')
+  const thankYou = document.createElement('div').
+  classList.add('thank-you');
+  const thankYouHeading = document.createElement('h2');
+  const thankYouText = document.createElement('p');
+  const container = document.querySelector('.form .right')
 
   fetch("/", {
     method: "POST",
@@ -73,8 +80,14 @@ const handleSubmit = (event) => {
   })
     .then(() => console.log("Form successfully submitted"))
     .catch((error) => alert(error));
+
+    thankYouHeading.textContent = 'Thank You';
+    thankYouText.textContent = 'Thank you for contacting us, we\'ll be in touch very SVGComponentTransferFunctionElement.'
+    contactForm.remove();
+    container.appendChild(thankYou);
+    thankYou.appendChild(thankYouHeading);
+    thankYou.appendChild(thankYouText);
+
 };
 
-document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
+document.querySelector("form").addEventListener("submit", handleSubmit);
