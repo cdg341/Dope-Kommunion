@@ -2,13 +2,24 @@
   background: linear-gradient(90deg, #d2bc5e,#cc8f86, #aaada3 )
   text-align: center
   padding: 20rem 10rem
-  p
+  +below($m)
+    padding: 12rem 4rem
+  +below($s)
+    padding-top: 6rem
+    padding-bottom: 6rem
+  h2
     max-width: 125rem
     font-weight: 700
     margin: 0 auto
     color: #fff
     font-size: 7rem
+    +below($m)
+      font-size: 5rem
+    +below($s)
+      font-size: 3rem
   span
     color: #fff
     padding-top: 2rem
+    font-size: 3rem
     display: block
+    font-weight: 300

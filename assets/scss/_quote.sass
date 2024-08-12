@@ -5,12 +5,19 @@
   +below($xm)
     padding-left: 3rem
     padding-right:3rem
-  p
-    max-width: 70rem
+  +below($s)
+    padding-bottom: 6rem
+  h2
+    max-width: 100rem
     margin: 0 auto
-    font-size: 3rem
+    font-size: 4rem
     color: #b79b6f
+    font-weight: 400
+    +below($s)
+      font-size: 3rem
   span
-    color: #b79b6f
+    color: #fff
+    font-size: 3rem
+    font-weight: 300
     padding-top: 2rem
     display: block

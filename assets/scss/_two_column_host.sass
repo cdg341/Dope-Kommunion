@@ -4,13 +4,22 @@
   +fb(stretch, center)
   padding: 12rem
   gap: 5rem
+  +below($m)
+    flex-direction: column
+  +below($s)
+    padding: 6rem 4rem
   .left, .right
     width: 50%
     +fb(center, flex-start)
     flex-direction: column
+    +below($m)
+      width: 100%
     .text-content
       max-width: 48rem
       margin: 0 auto
+      +below($m)
+        max-width: unset
+        text-align: center
     .button
       text-decoration: none
       border: 1px solid #fff

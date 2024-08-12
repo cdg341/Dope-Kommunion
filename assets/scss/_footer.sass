@@ -1,11 +1,22 @@
 footer
   background-color: #000
   color: #fff
-  padding: 8rem 12rem
+  padding: 8rem 4rem
+  +fb(flex-start, flex-start)
+  flex-direction: column
+  +below($m)
+    align-items: center
   .contact
     +fb(center, flex-start)
     gap: 10rem
     padding-bottom: 5rem
+    &:nth-last-child(1)
+      padding-bottom: 0
+    +below($m)
+      flex-direction: column
+      gap: 2rem
+      justify-content: center
+      padding-bottom: 10rem
     .heading
       text-transform: uppercase
       font-size: 5rem
@@ -20,6 +31,8 @@ footer
     .cash-con
       +fb(center, center)
       gap: 5rem
+      +below($xs)
+        gap: 2rem
       .cash-icons
         img
           width: 6rem

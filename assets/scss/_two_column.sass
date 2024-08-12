@@ -7,23 +7,36 @@
   +below($xm)
     flex-direction: column-reverse
     padding: 8rem 3rem
+  +below($s)
+    padding-top: 6rem
+    padding-bottom: 6rem
   .left, .right
     width: 50%
     +below($xm)
       width: 100%
   .left
+    +below($m)
+      max-width: 50rem
     img
       height: 100%
       width: 100%
       object-fit: cover
   .right
+    +below($m)
+      text-align: center
     .heading
       span
         display: block
       h2
         font-size: 5rem
         text-transform: uppercase
+        +below($m)
+          font-size: 4rem
+          padding-bottom: 3rem
     .text-content
+      +below($m)
+        max-width: 65rem
+        margin: 0 auto
       p
         line-height: 1.7
         max-width: 46rem

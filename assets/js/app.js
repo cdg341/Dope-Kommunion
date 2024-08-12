@@ -1,11 +1,14 @@
 const header = document.querySelector('.header');
-// @import owlCarousel
+
+window.addEventListener('DOMContentLoaded', ()=> {
+  setTimeout(() => {
+    header.classList.add('top-active');
+  }, 1000);
+})
 
 window.addEventListener('scroll', ()=> {
-  console.log(window.scrollY);
   if(window.scrollY > 30) {
     header.classList.add('active');
-    console.log('test');
   } else if(window.scrollY == 0) {
     header.classList.remove('active')
   }
@@ -46,25 +49,13 @@ menuLink.forEach((link) => {
   })
 });
 
-// document.addEventListener('DOMContentLoaded', ()=> {
-//   const carousel = document.querySelector('.owl-carousel');
+const mobileOverlay = document.querySelector('.mobile-overlay');
 
-//   carousel.owlCarousel();
-// })
-// $(document).ready(function($) {
-//   $('.owl-carousel').owlCarousel();
-//   if($(window).width() < 768) {
-//       $('.picture-row').addClass('owl-carousel');
-//     } else {
-//       $('.picture-row').removeClass('owl-carousel');
-//     }
-//   $(window).on('resize', function() {
-//     $('.owl-carousel').owlCarousel();
-//     if($(window).width() < 768) {
-//       $('.picture-row').addClass('owl-carousel');
-//     } else {
-//       $('.picture-row').removeClass('owl-carousel');
-//     }
-
-//   })
-// })
+mobileOverlay.addEventListener('click', ()=> {
+  body.classList.remove('overlay-active');
+  bar.forEach((bars) => {
+    bars.classList.remove('change');
+    bars.classList.add('back');
+    });
+  mobileMenu.classList.remove('active')
+})

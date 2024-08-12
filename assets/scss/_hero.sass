@@ -7,31 +7,53 @@
   // height: clamp(30rem, 48vw, 111rem)
   display: flex
   align-items: flex-start
-  justify-content: flex-start
+  justify-content: space-between
   // padding: 78rem 10rem 1rem
   height: 100vh
   padding: 0 10rem
-  row-gap: 10rem
+  // row-gap: 10rem
   flex-direction: column
-  +below($m)
-    height: 55vh
+  +below($xm)
+    height: auto
+    gap: 5rem
+    padding: 0 4rem
   .logo
     padding-top: 7rem
+    +below($xl)
+      padding-top: 15rem
+    +below($xm)
+      padding-top: 7rem
     img
-      width: clamp(2rem, 35vw, 55rem)
+      width: clamp(2rem, 35vw, 50rem)
+      +below($xl)
+        width: clamp(2rem, 35vw, 40rem)
   .heading
     +fb(flex-end, space-between)
     width: 100%
+    padding-bottom: 6rem
+    +below($xm)
+      flex-direction: column
+      gap: 3rem
+      align-items: flex-start
     h1
       text-transform: uppercase
       color: #fff
       font-size: 6rem
+      +below($m)
+        font-size: 4.5rem
+      +below($s)
+        font-size: 4rem
+      +below(450px)
+        br
+          display: none
     .socials
       .social-icons
         margin-right: 2rem
         img
           width: 5rem
           +transition
+          +below($m)
+            width: 4rem
           &:hover
             transform: translateY(-5px)
         #youtube, #facebook

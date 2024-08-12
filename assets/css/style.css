@@ -2,7 +2,6 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-  scroll-margin-top: -26.4px;
 }
 
 * {
@@ -25,22 +24,44 @@ body h2 {
   margin: 0;
 }
 
+section {
+  scroll-margin-top: 74px;
+}
+@media only screen and (max-width: 1024px) {
+  section {
+    scroll-margin-top: 70px;
+  }
+}
+
 .header {
   position: fixed;
   z-index: 999;
-  top: 0;
+  top: -100px;
   left: 0;
   right: 0;
   color: #fff;
-  transition: all 0.3s ease-out;
-  padding: 7.5rem 1.5rem 2.5rem 0;
+  transition: 1s ease-in-out top, 0.3s ease-in-out padding;
+  padding: 7.5rem 0rem 2.5rem 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+@media only screen and (max-width: 1200px) {
+  .header {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .header {
+    justify-content: flex-end;
+  }
+}
 .header.active {
   background-color: #000;
   padding-top: 2.5rem;
+}
+.header.top-active {
+  top: 0;
 }
 .header .nav-menu {
   padding-right: 10rem;
@@ -48,6 +69,11 @@ body h2 {
   align-items: center;
   justify-content: flex-end;
   gap: 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .header .nav-menu {
+    padding-right: 0;
+  }
 }
 .header .nav-menu a {
   color: #fff;
@@ -70,6 +96,7 @@ body h2 {
 }
 .header .mobile-button {
   cursor: pointer;
+  padding-right: 4rem;
 }
 @media only screen and (min-width: 1024px) {
   .header .mobile-button {
@@ -108,17 +135,20 @@ body h2 {
   padding: 2rem 2.5rem 10rem 2.5rem;
   top: 0;
   left: 0;
-  width: 33rem;
+  width: 30rem;
   height: 100vh;
   transform: translateX(-100%);
   overflow: auto;
   transition: all 0.3s ease-out;
   text-align: left;
   z-index: 99999;
-  background-color: #484848;
+  background-color: #ffffff;
+}
+.mobile-menu .logo img {
+  max-width: 7rem;
 }
 .mobile-menu .menu-item {
-  padding: 0;
+  padding: 2rem 0;
   text-align: left;
   list-style: none;
 }
@@ -126,10 +156,10 @@ body h2 {
   padding: 1rem 0;
   width: 100%;
   display: block;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: #fff;
+  color: #000000;
   padding-right: 1.75rem;
   transition: all 0.3s linear;
   text-decoration: none;
@@ -216,33 +246,72 @@ body.overlay-active .mobile-overlay {
   background-size: cover;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-between;
   height: 100vh;
   padding: 0 10rem;
-  row-gap: 10rem;
   flex-direction: column;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
   .hero {
-    height: 55vh;
+    height: auto;
+    gap: 5rem;
+    padding: 0 4rem;
   }
 }
 .hero .logo {
   padding-top: 7rem;
 }
+@media only screen and (max-width: 1440px) {
+  .hero .logo {
+    padding-top: 15rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .hero .logo {
+    padding-top: 7rem;
+  }
+}
 .hero .logo img {
-  width: clamp(2rem, 35vw, 55rem);
+  width: clamp(2rem, 35vw, 50rem);
+}
+@media only screen and (max-width: 1440px) {
+  .hero .logo img {
+    width: clamp(2rem, 35vw, 40rem);
+  }
 }
 .hero .heading {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   width: 100%;
+  padding-bottom: 6rem;
+}
+@media only screen and (max-width: 1024px) {
+  .hero .heading {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+  }
 }
 .hero .heading h1 {
   text-transform: uppercase;
   color: #fff;
   font-size: 6rem;
+}
+@media only screen and (max-width: 992px) {
+  .hero .heading h1 {
+    font-size: 4.5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero .heading h1 {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .hero .heading h1 br {
+    display: none;
+  }
 }
 .hero .heading .socials .social-icons {
   margin-right: 2rem;
@@ -250,6 +319,11 @@ body.overlay-active .mobile-overlay {
 .hero .heading .socials .social-icons img {
   width: 5rem;
   transition: all 0.3s ease-out;
+}
+@media only screen and (max-width: 992px) {
+  .hero .heading .socials .social-icons img {
+    width: 4rem;
+  }
 }
 .hero .heading .socials .social-icons img:hover {
   transform: translateY(-5px);
@@ -273,6 +347,12 @@ body.overlay-active .mobile-overlay {
     padding: 8rem 3rem;
   }
 }
+@media only screen and (max-width: 768px) {
+  .two-column {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
 .two-column .left, .two-column .right {
   width: 50%;
 }
@@ -281,10 +361,20 @@ body.overlay-active .mobile-overlay {
     width: 100%;
   }
 }
+@media only screen and (max-width: 992px) {
+  .two-column .left {
+    max-width: 50rem;
+  }
+}
 .two-column .left img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+@media only screen and (max-width: 992px) {
+  .two-column .right {
+    text-align: center;
+  }
 }
 .two-column .right .heading span {
   display: block;
@@ -292,6 +382,18 @@ body.overlay-active .mobile-overlay {
 .two-column .right .heading h2 {
   font-size: 5rem;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 992px) {
+  .two-column .right .heading h2 {
+    font-size: 4rem;
+    padding-bottom: 3rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .two-column .right .text-content {
+    max-width: 65rem;
+    margin: 0 auto;
+  }
 }
 .two-column .right .text-content p {
   line-height: 1.7;
@@ -319,14 +421,27 @@ body.overlay-active .mobile-overlay {
     padding-right: 3rem;
   }
 }
-.quote p {
-  max-width: 70rem;
+@media only screen and (max-width: 768px) {
+  .quote {
+    padding-bottom: 6rem;
+  }
+}
+.quote h2 {
+  max-width: 100rem;
   margin: 0 auto;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #b79b6f;
+  font-weight: 400;
+}
+@media only screen and (max-width: 768px) {
+  .quote h2 {
+    font-size: 3rem;
+  }
 }
 .quote span {
-  color: #b79b6f;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 300;
   padding-top: 2rem;
   display: block;
 }
@@ -359,17 +474,40 @@ body.overlay-active .mobile-overlay {
   text-align: center;
   padding: 20rem 10rem;
 }
-.quote-two p {
+@media only screen and (max-width: 992px) {
+  .quote-two {
+    padding: 12rem 4rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .quote-two {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.quote-two h2 {
   max-width: 125rem;
   font-weight: 700;
   margin: 0 auto;
   color: #fff;
   font-size: 7rem;
 }
+@media only screen and (max-width: 992px) {
+  .quote-two h2 {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .quote-two h2 {
+    font-size: 3rem;
+  }
+}
 .quote-two span {
   color: #fff;
   padding-top: 2rem;
+  font-size: 3rem;
   display: block;
+  font-weight: 300;
 }
 
 .two-column-host {
@@ -381,6 +519,16 @@ body.overlay-active .mobile-overlay {
   padding: 12rem;
   gap: 5rem;
 }
+@media only screen and (max-width: 992px) {
+  .two-column-host {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .two-column-host {
+    padding: 6rem 4rem;
+  }
+}
 .two-column-host .left, .two-column-host .right {
   width: 50%;
   display: flex;
@@ -388,9 +536,20 @@ body.overlay-active .mobile-overlay {
   justify-content: flex-start;
   flex-direction: column;
 }
+@media only screen and (max-width: 992px) {
+  .two-column-host .left, .two-column-host .right {
+    width: 100%;
+  }
+}
 .two-column-host .left .text-content, .two-column-host .right .text-content {
   max-width: 48rem;
   margin: 0 auto;
+}
+@media only screen and (max-width: 992px) {
+  .two-column-host .left .text-content, .two-column-host .right .text-content {
+    max-width: unset;
+    text-align: center;
+  }
 }
 .two-column-host .left .button, .two-column-host .right .button {
   text-decoration: none;
@@ -420,17 +579,43 @@ body.overlay-active .mobile-overlay {
   gap: 8rem;
   background-color: #fff;
 }
+@media only screen and (max-width: 992px) {
+  .form {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .form {
+    padding: 6rem 4rem;
+  }
+}
 .form .left {
   width: 40%;
 }
+@media only screen and (max-width: 992px) {
+  .form .left {
+    width: 100%;
+  }
+}
 .form .left .text-content h2 {
   padding-bottom: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .form .left .text-content h2 {
+    font-size: 4rem;
+  }
 }
 .form .left .text-content p {
   line-height: 1.7;
 }
 .form .right {
   width: 60%;
+}
+@media only screen and (max-width: 992px) {
+  .form .right {
+    width: 100%;
+  }
 }
 .form .right form label {
   display: block;
@@ -483,7 +668,16 @@ body.overlay-active .mobile-overlay {
 footer {
   background-color: #000;
   color: #fff;
-  padding: 8rem 12rem;
+  padding: 8rem 4rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+@media only screen and (max-width: 992px) {
+  footer {
+    align-items: center;
+  }
 }
 footer .contact {
   display: flex;
@@ -491,6 +685,17 @@ footer .contact {
   justify-content: flex-start;
   gap: 10rem;
   padding-bottom: 5rem;
+}
+footer .contact:nth-last-child(1) {
+  padding-bottom: 0;
+}
+@media only screen and (max-width: 992px) {
+  footer .contact {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    padding-bottom: 10rem;
+  }
 }
 footer .contact .heading {
   text-transform: uppercase;
@@ -512,6 +717,11 @@ footer .contact .cash-con {
   align-items: center;
   justify-content: center;
   gap: 5rem;
+}
+@media only screen and (max-width: 576px) {
+  footer .contact .cash-con {
+    gap: 2rem;
+  }
 }
 footer .contact .cash-con .cash-icons img {
   width: 6rem;

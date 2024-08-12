@@ -3,15 +3,26 @@
   padding: 12rem
   gap: 8rem
   background-color: #fff
+  +below($m)
+    flex-direction: column
+    gap: 4rem
+  +below($s)
+    padding: 6rem 4rem
   .left
     width: 40%
+    +below($m)
+      width: 100%
     .text-content
       h2
         padding-bottom: 2rem
+        +below($s)
+          font-size: 4rem
       p
         line-height: 1.7
   .right
     width: 60%
+    +below($m)
+      width: 100%
     form
       label
         display: block
@@ -27,7 +38,6 @@
         &:hover, &:focus
           outline-color: #000
           // border-color: red
-
       legend
         padding-bottom: 1.5rem
       .name
