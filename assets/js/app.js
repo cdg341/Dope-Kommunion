@@ -1,6 +1,6 @@
 const header = document.querySelector('.header');
 
-window.addEventListener('DOMContentLoaded', ()=> {
+window.addEventListener('load', ()=> {
   setTimeout(() => {
     header.classList.add('top-active');
   }, 1000);

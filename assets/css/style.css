@@ -26,6 +26,7 @@ body h2 {
 
 section {
   scroll-margin-top: 74px;
+  overflow: hidden;
 }
 @media only screen and (max-width: 1024px) {
   section {
@@ -38,7 +39,7 @@ section {
   z-index: 999;
   top: -100px;
   left: 0;
-  right: 0;
+  width: 100%;
   color: #fff;
   transition: 1s ease-in-out top, 0.3s ease-in-out padding;
   padding: 7.5rem 0rem 2.5rem 0;
@@ -98,7 +99,7 @@ section {
   cursor: pointer;
   padding-right: 4rem;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .header .mobile-button {
     display: none;
   }
@@ -511,6 +512,7 @@ body.overlay-active .mobile-overlay {
 }
 
 .two-column-host {
+  overflow: hidden;
   background-color: #000;
   color: #fff;
   display: flex;
