@@ -363,7 +363,7 @@ body.overlay-active .mobile-overlay {
     width: 100%;
   }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
   .two-column .left {
     max-width: 50rem;
   }
@@ -373,7 +373,7 @@ body.overlay-active .mobile-overlay {
   width: 100%;
   object-fit: cover;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1024px) {
   .two-column .right {
     text-align: center;
   }
