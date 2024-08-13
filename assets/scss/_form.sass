@@ -47,11 +47,23 @@
         .first-name, .last-name
           width: 100%
       .date
+        max-width: fit-content
+        position: relative
+        &::after
+          position: absolute
+          content: "\1F5D3"
+          right: 0
+          bottom: 0
+          bottom: .5rem
+          font-size: 4rem
+          z-index: -1
         label
           margin-top: 2rem
           max-width: fit-content
         input
-          width: unset
+          position: relative
+          cursor: pointer
+          background-color: transparent
           &::placeholder
             color: #000
       button[type=submit]
