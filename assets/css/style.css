@@ -646,6 +646,7 @@ body.overlay-active .mobile-overlay {
 }
 .form .right form .date label {
   margin-top: 2rem;
+  max-width: fit-content;
 }
 .form .right form .date input[type=date] {
   width: unset;
@@ -667,6 +668,25 @@ body.overlay-active .mobile-overlay {
   border-color: transparent;
 }
 
+@media (max-width: 640px) {
+  input[type=date]::before {
+    color: #999;
+    content: attr(placeholder);
+    margin-right: 3px;
+  }
+  input[type=date]:focus::before {
+    content: attr(placeholder) !important;
+  }
+  input[type=date].has-value:focus::before {
+    content: none !important;
+  }
+  input[type=date].has-value::before {
+    content: none !important;
+  }
+  input[type=date] {
+    display: flex;
+  }
+}
 footer {
   background-color: #000;
   color: #fff;
