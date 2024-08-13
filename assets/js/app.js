@@ -91,3 +91,23 @@ const handleSubmit = (event) => {
 };
 
 document.querySelector("form").addEventListener("submit", handleSubmit);
+
+$(document).ready(function() {
+  $('#zelle').magnificPopup({
+    type: 'image'
+  });
+})
+
+// const picker = datepicker('#date')
+const pickerInput = document.querySelector('#date')
+const currentDate = new Date();
+const year = currentDate.getFullYear();
+const month = currentDate.getMonth() + 1; // Months are zero-indexed, so we add 1
+const day = currentDate.getDate();
+
+pickerInput.setAttribute('placeholder', month + '/' + day + '/' + year)
+
+const elem = document.querySelector('#date');
+const datepicker = new Datepicker(elem, {
+  // ...options
+});

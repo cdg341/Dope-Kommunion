@@ -50,8 +50,10 @@
         label
           margin-top: 2rem
           max-width: fit-content
-        input[type=date]
+        input
           width: unset
+          &::placeholder
+            color: #000
       button[type=submit]
         margin-top: 2rem
         background-color: transparent
@@ -66,19 +68,31 @@
           background-color: #000
           color: #fff
           border-color: transparent
-  +below($s)
-    input[type="date"]::before
-      color: #999
-      content: attr(placeholder)
-      margin-right: 3px
-    input[type="date"]:focus::before
-      content: attr(placeholder) !important
-    input[type="date"].has-value:focus::before
-      content: none !important
-    input[type="date"].has-value::before
-      content: none !important
-    input[type="date"]
-      display: flex
-
+  .datepicker
+    .datepicker-view
+      width: 25.2rem
+      .datepicker-cell
+        height: 3.2rem
+        &.selected
+          background-color: #b99d6f
+          color: #000
+        &:not(.disabled)
+          &:hover
+            background-color: #dcdcdc
+        &.next:not(.disabled)
+          &:hover
+            background-color: #dcdcdc
+        &.focused:not(.selected)
+          background-color: #b99d6f
+          color: #fff
+    .datepicker-controls .button
+      height: 3.2rem
+      font-size: 1.6rem
+      padding: calc(.6rem - 1px) 1.2rem
+      &:hover
+        background-color: #dcdcdc
+    .dow
+      height: 2.4rem
+      font-size: 1.4rem
 
 

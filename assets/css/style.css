@@ -55,6 +55,7 @@ section {
 @media only screen and (max-width: 1024px) {
   .header {
     justify-content: flex-end;
+    padding-top: 3.5rem;
   }
 }
 .header.active {
@@ -648,8 +649,11 @@ body.overlay-active .mobile-overlay {
   margin-top: 2rem;
   max-width: fit-content;
 }
-.form .right form .date input[type=date] {
+.form .right form .date input {
   width: unset;
+}
+.form .right form .date input::placeholder {
+  color: #000;
 }
 .form .right form button[type=submit] {
   margin-top: 2rem;
@@ -667,24 +671,37 @@ body.overlay-active .mobile-overlay {
   color: #fff;
   border-color: transparent;
 }
-@media only screen and (max-width: 768px) {
-  .form input[type=date]::before {
-    color: #999;
-    content: attr(placeholder);
-    margin-right: 3px;
-  }
-  .form input[type=date]:focus::before {
-    content: attr(placeholder) !important;
-  }
-  .form input[type=date].has-value:focus::before {
-    content: none !important;
-  }
-  .form input[type=date].has-value::before {
-    content: none !important;
-  }
-  .form input[type=date] {
-    display: flex;
-  }
+.form .datepicker .datepicker-view {
+  width: 25.2rem;
+}
+.form .datepicker .datepicker-view .datepicker-cell {
+  height: 3.2rem;
+}
+.form .datepicker .datepicker-view .datepicker-cell.selected {
+  background-color: #b99d6f;
+  color: #000;
+}
+.form .datepicker .datepicker-view .datepicker-cell:not(.disabled):hover {
+  background-color: #dcdcdc;
+}
+.form .datepicker .datepicker-view .datepicker-cell.next:not(.disabled):hover {
+  background-color: #dcdcdc;
+}
+.form .datepicker .datepicker-view .datepicker-cell.focused:not(.selected) {
+  background-color: #b99d6f;
+  color: #fff;
+}
+.form .datepicker .datepicker-controls .button {
+  height: 3.2rem;
+  font-size: 1.6rem;
+  padding: calc(0.6rem - 1px) 1.2rem;
+}
+.form .datepicker .datepicker-controls .button:hover {
+  background-color: #dcdcdc;
+}
+.form .datepicker .dow {
+  height: 2.4rem;
+  font-size: 1.4rem;
 }
 
 footer {
