@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700");
 html {
   font-size: 10px;
@@ -652,12 +651,15 @@ body.overlay-active .mobile-overlay {
 }
 .form .right form .date::after {
   position: absolute;
-  content: "🗓";
+  content: "";
+  background-image: url("/assets/images/calendar.png");
   right: 0;
-  bottom: 0;
-  bottom: 0.5rem;
-  font-size: 4rem;
   z-index: -1;
+  bottom: 2px;
+  height: 5rem;
+  width: 5rem;
+  background-size: 5rem;
+  background-repeat: no-repeat;
 }
 .form .right form .date label {
   margin-top: 2rem;
