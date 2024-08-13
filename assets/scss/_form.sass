@@ -66,29 +66,19 @@
           background-color: #000
           color: #fff
           border-color: transparent
-
-
-@media (max-width: 640px)
-
+  below($s)
     input[type="date"]::before
-        color: #999
-        content: attr(placeholder)
-        margin-right: 3px
-
-
+      color: #999
+      content: attr(placeholder)
+      margin-right: 3px
     input[type="date"]:focus::before
-        content: attr(placeholder) !important
-
-
+      content: attr(placeholder) !important
     input[type="date"].has-value:focus::before
-        content: none !important
-
-
+      content: none !important
     input[type="date"].has-value::before
-        content: none !important
-
-
-
+      content: none !important
     input[type="date"]
-        display: flex
+      display: flex
+
+
 
