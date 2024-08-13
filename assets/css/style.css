@@ -687,9 +687,12 @@ body.overlay-active .mobile-overlay {
 .form .datepicker .datepicker-view .datepicker-cell.next:not(.disabled):hover {
   background-color: #dcdcdc;
 }
+.form .datepicker .datepicker-view .datepicker-cell.focused.selected {
+  background-color: #b99d6f;
+}
 .form .datepicker .datepicker-view .datepicker-cell.focused:not(.selected) {
   background-color: #b99d6f;
-  color: #fff;
+  font-weight: 600;
 }
 .form .datepicker .datepicker-controls .button {
   height: 3.2rem;
