@@ -3,7 +3,7 @@ const header = document.querySelector('.header');
 window.addEventListener('load', ()=> {
   setTimeout(() => {
     header.classList.add('top-active');
-  }, 1000);
+  }, 500);
 })
 
 window.addEventListener('scroll', ()=> {
@@ -98,14 +98,13 @@ $(document).ready(function() {
   });
 })
 
-// const picker = datepicker('#date')
-const pickerInput = document.querySelector('#date')
-const currentDate = new Date();
-const year = currentDate.getFullYear();
-const month = currentDate.getMonth() + 1; // Months are zero-indexed, so we add 1
-const day = currentDate.getDate();
+// const pickerInput = document.querySelector('#date')
+// const currentDate = new Date();
+// const year = currentDate.getFullYear();
+// const month = currentDate.getMonth() + 1; // Months are zero-indexed, so we add 1
+// const day = currentDate.getDate();
 
-pickerInput.setAttribute('placeholder', month + '/' + day + '/' + year)
+// pickerInput.setAttribute('placeholder', month + '/' + day + '/' + year)
 
 const elem = document.querySelector('#date');
 const datepicker = new Datepicker(elem, {
