@@ -274,7 +274,12 @@ body.overlay-active .mobile-overlay {
   }
 }
 .hero .logo img {
-  width: clamp(2rem, 35vw, 40rem);
+  width: clamp(2rem, 35vw, 50rem);
+}
+@media only screen and (max-width: 1440px) {
+  .hero .logo img {
+    width: clamp(2rem, 35vw, 40rem);
+  }
 }
 .hero .heading {
   display: flex;
