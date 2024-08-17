@@ -331,6 +331,11 @@ body.overlay-active .mobile-overlay {
 .hero .heading .socials .social-icons img:hover {
   transform: translateY(-5px);
 }
+@media only screen and (max-width: 992px) {
+  .hero .heading .socials .social-icons img:hover {
+    transform: translateY(0);
+  }
+}
 .hero .heading .socials .social-icons #youtube, .hero .heading .socials .social-icons #facebook {
   border-radius: 10px;
 }
@@ -732,7 +737,7 @@ body.overlay-active .mobile-overlay {
 footer {
   background-color: #000;
   color: #fff;
-  padding: 8rem 4rem;
+  padding: 8rem 0 0;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -749,6 +754,9 @@ footer .contact {
   justify-content: flex-start;
   gap: 10rem;
   padding-bottom: 5rem;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 footer .contact:nth-last-child(1) {
   padding-bottom: 0;
@@ -796,6 +804,25 @@ footer .contact .cash-con .cash-icons img:nth-last-child(n) {
 }
 footer .contact .cash-con .cash-icons img:hover {
   transform: translateY(-5px);
+}
+@media only screen and (max-width: 992px) {
+  footer .contact .cash-con .cash-icons img:hover {
+    transform: translateY(0);
+  }
+}
+footer .copyright {
+  background-color: #110f1c;
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+}
+footer .copyright a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+footer .copyright a:hover {
+  color: #b99d6f;
 }
 
 /*# sourceMappingURL=style.css.map */
