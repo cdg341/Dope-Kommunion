@@ -317,6 +317,7 @@ body.overlay-active .mobile-overlay {
 }
 .hero .heading .socials .social-icons {
   margin-right: 2rem;
+  color: transparent;
 }
 .hero .heading .socials .social-icons img {
   width: 5rem;
