@@ -813,8 +813,11 @@ footer .contact .cash-con .cash-icons img:hover {
 footer .copyright {
   background-color: #110f1c;
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem;
   text-align: center;
+}
+footer .copyright p {
+  font-size: 16px;
 }
 footer .copyright a {
   color: #fff;
